@@ -20,10 +20,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '!8xb05oar6raxzqlqm9-8yds6mfdn-0b_yh1%1e+j5m+0r37)m'
+file_dir = os.path.dirname(os.path.realpath('__file__'))
+file_path = os.path.join(file_dir, 'mysite\etc\key.txt')
+with open(file_path) as f:
+    SECRET_KEY = f.read().strip()
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com', '.herokuapp.com']
 
@@ -124,4 +127,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 LOGIN_REDIRECT_URL = '/'
 
-
+CSRF_COOKIE_SECURE = True 
+SESSION_COOKIE_SECURE = True 
