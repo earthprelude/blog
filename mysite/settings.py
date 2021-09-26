@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog.apps.BlogConfig'
+    'blog.apps.BlogConfig', 
+    'mysite'
 ]
 
 MIDDLEWARE = [
@@ -82,7 +83,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'ychtfbhj',
         'USER': 'ychtfbhj',
         'PASSWORD': 'LXuTA5Q9NVYHBXH7c0iym9ikVWqCR8Pr',
@@ -137,5 +138,5 @@ LOGIN_REDIRECT_URL = '/'
 CSRF_COOKIE_SECURE = True 
 SESSION_COOKIE_SECURE = True 
 
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
+# db_from_env = dj_database_url.config(conn_max_age=500)
+# DATABASES['default'].update(db_from_env)
