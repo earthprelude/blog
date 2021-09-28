@@ -1,5 +1,5 @@
-# blog
+# Blog
 A blog created with Django and deployed on PythonAnywhere.
 
-#Credits
+### Credits
 Followed this [tutorial](https://tutorial.djangogirls.org/en/) by DjangoGirls.
