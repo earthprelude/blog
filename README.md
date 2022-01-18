@@ -1,5 +1,5 @@
 # Blog
-A blog created with Django and deployed on PythonAnywhere.
+A blog application created with Django and deployed on PythonAnywhere.
 <!-- 
 http://earthprelude.pythonanywhere.com/ -->
 
